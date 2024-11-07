@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halloween Hacks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+</head>
+<body>
+  <div class="nav">
+        <ul>
+          <li class="home"><a href="index.html">Home</a></li>
+          <li class="blog"><a href="https://capricious-jumpy-tenor.glitch.me/lesson1.html">Quiz</a></li>
+          <li class="podcast"><a href="https://hall-forum.glitch.me/">Costume Ideas</a></li>
+          <li class="contact"><a href="countdown.html">Countdown</a></li>
+        </ul>
+      </div>
+
+  <div class="container">
+    <div class="headerContainer">
+      <h1>Costume Ideas</h1>
+    </div>
+
+    <div class="formContainer">
+      <form id="reviewForm" enctype="multipart/form-data">
+        <div class="formGroup">
+          <label for="company">Costume Name</label>
+          <input type="text" id="company" placeholder="Start typing..." required>
+        </div>
+
+        <div class="formGroup">
+          <label for="industry">Theme</label>
+          <select id="industry" required>
+            <option value="">Horror</option>
+            <option value="Tech">Disney</option>
+            <option value="Healthcare">Animal</option>
+            <option value="Finance">Duo fit</option>
+              <option value="Finance">Group Fit</option>
+              <option value="Finance">other</option>
+          </select>
+        </div>
+
+        <div class="formGroup">
+          <label for="rating">Rate the fit (1-5)</label>
+          <input type="number" id="rating" min="1" max="5" placeholder="Rating" required>
+        </div>
+
+        <div class="formGroup">
+          <label for="logo">Picture of Costume</label>
+          <input type="file" id="logo" accept="image/*">
+        </div>
+
+        <div class="formGroup">
+          <label for="review">Caption</label>
+          <textarea id="review" rows="4" placeholder="Write your caption..." required></textarea>
+        </div>
+
+        <div class="submitButton">
+          <button type="submit">Submit Review</button>
+        </div>
+      </form>
+    </div>
+
+    <hr>
+
+    <div id="reviewsContainer">
+      <h2>Costumes</h2>
+      <div id="reviewsList"></div>
+    </div>
+
+   
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
