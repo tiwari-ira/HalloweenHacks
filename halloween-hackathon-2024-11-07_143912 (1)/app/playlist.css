@@ -1,0 +1,198 @@
+
+@import url("https://fonts.cdnfonts.com/css/metal-macabre-2");
+@import url("https://fonts.cdnfonts.com/css/chaos-metal");
+@import url("https://fonts.cdnfonts.com/css/metal-macabre");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Fuggles&family=Jura:wght@300&family=Kenia&display=swap");
+@import url("https://fonts.cdnfonts.com/css/crush-metal");
+@import url("https://fonts.cdnfonts.com/css/dezzy");
+@import url("https://fonts.cdnfonts.com/css/mockerel");
+@import url("https://fonts.cdnfonts.com/css/blood-on-cauldron");
+@import url("https://fonts.cdnfonts.com/css/devils-crew");
+@import url("https://fonts.cdnfonts.com/css/ghost-reverie");
+@import url("https://fonts.cdnfonts.com/css/heikudo-freedom");
+@import url("https://fonts.cdnfonts.com/css/halloweenn");body{
+  background-color: #1a1b20;
+  color: #ffc266;
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 8vh 92vh ;
+  grid-template-areas:
+    "nav"
+    "wompWomp"
+    ;
+  overflow:hidden;
+}
+
+/******************************************************************************
+nav below
+******************************************************************************/
+.nav {
+  grid-area: nav;
+  background: #1a0d16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px;
+
+  z-index: 80000;
+   background: #1a1b20;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  color: #afb2c9;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.7s, font-size 0.7s;
+  font-family: "Jura", sans-serif;
+}
+
+.nav ul li a:hover {
+  color: #585a73;
+  font-size: 20px;
+}
+.wompWomp
+{
+  grid-area:wompWomp;
+  background:red;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+    background: #1a1b20;
+  font-family: "Blood On Cauldron", sans-serif;
+}
+#myProgress {
+  width: 800px;
+   background-color: #d9d9f2; 
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#myBar {
+  width: 0%;
+  height: 5px;
+  background-color: #ffc266;
+  border-radius: 10px;
+}
+
+.logo {
+  fill: red;
+}
+
+.btn-action{
+  cursor: pointer;
+  padding-top: 10px;
+  width: 30px;
+}
+
+.btn-ctn, .infos-ctn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infos-ctn{
+padding-top: 20px;
+}
+
+.btn-ctn > div {
+ padding: 5px;
+ margin-top: 18px;
+ margin-bottom: 18px;
+}
+
+.infos-ctn > div {
+ margin-bottom: 8px;
+ color: #ffc266;
+}
+
+.first-btn{
+  margin-left: 3px;
+}
+
+.duration{
+  margin-left: 10px;
+}
+
+.title{
+  margin-left: 10px;
+  width: 510px;
+  text-align: center;
+  font-family: "Blood On Cauldron", sans-serif;
+  color:#62647d;
+}
+
+.player-ctn{
+  border-radius: 15px;
+  width: 900px;
+  padding: 10px;
+  background-color: #373737;
+  margin:auto;
+ 
+   background:#2b2c31
+    ;
+  
+  border:2px solid #62647d;
+  border-radius:10px;
+}
+
+.playlist-track-ctn{
+  display: flex;
+  background-color:  #1a1b20;
+  margin-top: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.playlist-track-ctn:last-child{
+  /*border: 1px solid #ffc266; */
+}
+
+.playlist-track-ctn > div{
+  margin:10px;
+}
+.playlist-info-track{
+  width: 80%;
+}
+.playlist-info-track,.playlist-duration{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #62647d;
+  font-size: 14px;
+  pointer-events: none;
+}
+.playlist-ctn{
+   padding-bottom: 20px;
+}
+.active-track{
+  background:  #62647d;
+  color: #62647d !important;
+  font-weight: bold;
+  
+}
+
+.active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
+  color: white !important;
+}
+
+
+.playlist-btn-play{
+  pointer-events: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.fas{
+  color: white;
+  font-size: 20px;
+}

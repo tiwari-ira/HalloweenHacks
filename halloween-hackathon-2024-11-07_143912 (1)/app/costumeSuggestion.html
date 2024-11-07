@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Start https://www.cursors-4u.com */
+     /* End https://www.cursors-4u.com */
+      @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #1a1b20;
+        font-family: "Patrick Hand", cursive;
+      }
+
+      #camera-container {
+        position: relative;
+        overflow: hidden;
+        margin-top: 30px;
+        border: 4px solid #62647d;
+      }
+
+      #camera {
+        width: 600px;
+        height: 100%;
+        object-fit: cover;
+        transform: scaleX(-1);
+      }
+
+      .verticalLine {
+        width: 5px;
+        height: 100%;
+        background: #62647d;
+        z-index: 20;
+        position: absolute;
+        top: 0;
+        animation: moveVerticalLine 3.5s linear forwards;
+        box-shadow: 0px 0px 20px #62647d;
+      }
+
+      .horizontalLine {
+        width: 100%;
+        height: 5px;
+        background: #62647d;
+        z-index: 20;
+        position: absolute;
+        left: 0;
+        animation: moveHorizontalLine 3.5s linear forwards;
+        animation-delay: 3.5s;
+        box-shadow: 0px 0px 20px #62647d;
+      }
+
+      @keyframes moveVerticalLine {
+        0%,
+        100% {
+          left: 0;
+        }
+        50% {
+          left: 50%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @keyframes moveHorizontalLine {
+        0%,
+        100% {
+          top: 0;
+        }
+        50% {
+          top: 50%;
+        }
+        100% {
+          top: 100%;
+        }
+      }
+
+      .progress-bar {
+        height: 30px;
+        width: 600px;
+        max-width: 100%;
+        background-color: #1a1b20;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 2px 0 10px inset rgba(0, 0, 0, 0.2);
+        position: relative;
+        margin-top: 60px;
+      }
+
+      .bar {
+        width: 0;
+        height: 100%;
+        background-color: #62647d;
+        background-image: linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.2) 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 30px 30px;
+        animation: move 7s linear infinite;
+        box-shadow: 2px 0 10px inset rgba(0, 0, 0, 0.7);
+        transition: width 7s ease-out;
+      }
+
+      @keyframes move {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 30px 30px;
+        }
+      }
+
+      .perc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-weight: bold;
+      }
+
+      #loading-text {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        color: #fff;
+      }
+
+      #result {
+        display: none;
+        font-size: 15px;
+        margin-top: 20px;
+        color:#62647d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-bar">
+      <div class="bar" data-size="100">
+        <span class="perc"></span>
+      </div>
+    </div>
+    <div id="loading-text">Analyzing face...</div>
+    <div id="camera-container">
+      <video id="camera" autoplay></video>
+      <div class="verticalLine"></div>
+      <div class="horizontalLine"></div>
+    </div>
+    <div id="result"></div>
+
+    <script>
+      function loading() {
+        document.querySelectorAll(".bar").forEach(function (current) {
+          let startWidth = 0;
+          const endWidth = current.dataset.size;
+
+          const interval = setInterval(frame, 70);
+
+          function frame() {
+            if (startWidth >= endWidth) {
+              clearInterval(interval);
+              document.getElementById("result").innerText = getRandomOption();
+              document.getElementById("result").style.display = "block";
+              document.getElementById("loading-text").style.display = "none";
+            } else {
+              startWidth++;
+              current.style.width = `${endWidth}%`;
+              current.firstElementChild.innerText = `${startWidth}%`;
+            }
+          }
+        });
+      }
+
+      setTimeout(loading, 0);
+
+      // Get user media
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then(function (stream) {
+          document.getElementById("camera").srcObject = stream;
+        })
+        .catch(function (err) {
+          console.error("Error accessing camera:", err);
+        });
+
+     
+      function getRandomOption() {
+        const options = [
+          "You’re giving serious witch vibes—you’d be perfect as a spooky sorceress this Halloween!",
+          "With that mysterious look, you’d make an amazing vampire. Go for the fangs!",
+          "ou look like you’d totally vibe with animals—how about a Disney princess costume?",
+           "With your charm, a pirate costume would be epic. Grab an eyepatch and get ready to sail!",
+          "Something about you says dark royalty. Ever thought of dressing as a gothic queen?",
+          "You have a magical aura—maybe a wizard or mage costume would be fitting?",
+          "I could totally see you rocking a classic, spooky ghost look!",
+          "Your smile says ‘hero’—you’d look amazing in a superhero costume!",
+          
+        ];
+        const randomIndex = Math.floor(Math.random() * options.length);
+        return options[randomIndex];
+      }
+    </script>
+  </body>
+</html>

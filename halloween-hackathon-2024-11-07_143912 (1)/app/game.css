@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.cdnfonts.com/css/metal-macabre-2");
+@import url("https://fonts.cdnfonts.com/css/chaos-metal");
+@import url("https://fonts.cdnfonts.com/css/metal-macabre");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Fuggles&family=Jura:wght@300&family=Kenia&display=swap");
+@import url("https://fonts.cdnfonts.com/css/crush-metal");
+@import url("https://fonts.cdnfonts.com/css/dezzy");
+@import url("https://fonts.cdnfonts.com/css/mockerel");
+@import url("https://fonts.cdnfonts.com/css/blood-on-cauldron");
+@import url("https://fonts.cdnfonts.com/css/devils-crew");
+@import url("https://fonts.cdnfonts.com/css/ghost-reverie");
+@import url("https://fonts.cdnfonts.com/css/heikudo-freedom");
+@import url("https://fonts.cdnfonts.com/css/halloweenn");
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 2em;
+  font-family: "Patrick Hand", cursive;
+  font-family: "Blood On Cauldron", sans-serif
+  background:yellow;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 3px 5px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+#counter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#end {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+#end button {
+  background-color: #8a8dab;
+  padding: 20px 50px 20px 50px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#controlls {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#controlls div {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 20px;
+}
+
+#controlls button {
+  width: 100%;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+#controlls button:first-of-type {
+  grid-column: 1/-1;
+}

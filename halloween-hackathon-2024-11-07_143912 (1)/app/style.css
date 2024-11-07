@@ -1,0 +1,702 @@
+@import url("https://fonts.cdnfonts.com/css/metal-macabre-2");
+@import url("https://fonts.cdnfonts.com/css/chaos-metal");
+@import url("https://fonts.cdnfonts.com/css/metal-macabre");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Fuggles&family=Jura:wght@300&family=Kenia&display=swap");
+@import url("https://fonts.cdnfonts.com/css/crush-metal");
+@import url("https://fonts.cdnfonts.com/css/dezzy");
+@import url("https://fonts.cdnfonts.com/css/mockerel");
+@import url("https://fonts.cdnfonts.com/css/blood-on-cauldron");
+@import url("https://fonts.cdnfonts.com/css/devils-crew");
+@import url("https://fonts.cdnfonts.com/css/ghost-reverie");
+@import url("https://fonts.cdnfonts.com/css/heikudo-freedom");
+@import url("https://fonts.cdnfonts.com/css/halloweenn");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  line-height: calc(1em + 0.5rem);
+}
+html,
+body {
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/******************************************************************************
+CSS
+******************************************************************************/
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 8vh 92vh 80vh 70vh 70vh 90vh;
+  grid-template-areas:
+    "nav"
+    "home"
+    "section1"
+    "section3"
+    "section4"
+    "gang";
+  overflow:hidden;
+}
+
+/******************************************************************************
+nav below
+******************************************************************************/
+.nav {
+  grid-area: nav;
+  background: #1a0d16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px;
+
+  z-index: 80000;
+   background: #1a1b20;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  color: #afb2c9;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.7s, font-size 0.7s;
+  font-family: "Jura", sans-serif;
+}
+
+.nav ul li a:hover {
+  color: #585a73;
+  font-size: 20px;
+}
+/******************************************************************************
+HOem below
+******************************************************************************/
+.homePage {
+  grid-area: home;
+  background: red;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+}
+.rightSide {
+  background: pink;
+ 
+  background: #1a1b20;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.leftSide {
+  background: orange;
+  background: #1a1b20;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10vw;
+}
+.leftSideContainer {
+  height: 300px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.houseImage {
+  width: 500px;
+  height: 500px;
+  background-image: url("https://cdn.glitch.global/af05de13-3487-49f0-91cc-ff64d1bdbd0b/Free%20Simple%20Modern%20Circle%20Design%20Studio%20Logo%20(9).png?v=1730656340035");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Animation for paragraphs */
+.animated-p {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 0.5s forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInScaleAndSlide {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.valuee {
+  font-size: 20px;
+}
+.p1 {
+  font-size: 40px;
+ font-family: "Blood On Cauldron", sans-serif;
+  color: #585a73;
+}
+.p2
+{
+    font-size: 20px;
+ color:#afb2c9;
+   font-family: "Jura", sans-serif;
+
+}
+.p3
+{
+  font-size: 20px;
+   color: #afb2c9;
+   font-family: "Jura", sans-serif;
+}
+.p4
+{
+  font-size: 20px;
+   color: #afb2c9;
+   font-family: "Jura", sans-serif;
+}
+.beware
+{
+  color:#3e1c34;
+  font-family: "Blood On Cauldron", sans-serif;
+}
+.houseImage:hover{
+  background:url("https://cdn.glitch.global/af05de13-3487-49f0-91cc-ff64d1bdbd0b/Free%20Simple%20Modern%20Circle%20Design%20Studio%20Logo%20(4).png?v=1730639191211");
+  
+}
+
+/******************************************************************************
+section1 below
+******************************************************************************/
+
+.section1{
+  grid-area: section1;
+  background: #1a1b20;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+    padding-left:50px;
+  padding-right:50px;
+  
+}
+.container1
+{margin:auto;
+  width:100%;
+  height:70vh;
+  padding-left:40px;
+  padding-right:40px;
+   background: #1a1b20;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background:#2b2c31
+    ;
+  
+  border:2px solid #62647d;
+  border-radius:10px;
+}
+.righSide1
+{
+  display:flex;
+  flex-direction:column;
+ 
+  justify-content:center;
+  text-align:left;
+ padding-right:5vw;
+  padding-left:5vw;
+}
+.leftSide1
+{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  
+}
+.moon
+{
+  height:40vh;
+  width:40vh;
+  background-image:url("https://cdn.glitch.global/af05de13-3487-49f0-91cc-ff64d1bdbd0b/Free%20Simple%20Modern%20Circle%20Design%20Studio%20Logo%20(5).png?v=1730639868453");
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:auto;
+  background-size: cover;
+}
+
+
+/******************************************************************************
+section1 below
+******************************************************************************/
+.section2{
+  grid-area: section2;
+  background:  #191939;
+
+}
+.section2 img
+{
+
+  width:100vw;
+  height:auto;
+
+}
+.witch {
+    width: 30vh;
+    height: 30vh;
+    position: relative;
+    animation: float 4s ease-in-out infinite; /* 2s duration, infinite loop */
+  }
+
+  /* Keyframes for the up-and-down animation */
+  @keyframes float {
+    0%, 100% {
+      top: 50px; /* Start at initial position */
+    }
+    50% {
+      top: -20px; /* Move up by 20px */
+    }
+  }
+/******************************************************************************
+section3 below
+******************************************************************************/
+.section3{
+  grid-area: section3;
+  background: #1a1b20;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+    padding-left:50px;
+  padding-right:50px;
+  
+  
+}
+.container3
+{margin:auto;
+  width:100%;
+  height:max-content;
+  padding-left:40px;
+  padding-right:40px;
+   background: #1a1b20;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background:#2b2c31
+    ;
+  border:2px solid #62647d;
+  border-radius:10px;
+  padding-block:40px;
+}
+
+.leftSide3{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:left;
+ padding-right:5vw;
+  padding-left:5vw;
+}
+.rightSide3
+{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.ghostImage {
+  width: 350px;
+  height: 350px;
+  background-image: url("https://cdn.glitch.global/af05de13-3487-49f0-91cc-ff64d1bdbd0b/Free%20Simple%20Modern%20Circle%20Design%20Studio%20Logo%20(7).png?v=1730650342640");
+  background-size: cover;
+  background-position: center;
+  margin:auto;
+
+}
+
+.ghostImage:hover
+{
+  background:url("https://cdn.glitch.global/af05de13-3487-49f0-91cc-ff64d1bdbd0b/Free%20Simple%20Modern%20Circle%20Design%20Studio%20Logo.gif?v=1730650252082");
+    background-size: cover;
+  background-position: center;
+  
+}
+/******************************************************************************
+section1 below
+******************************************************************************/
+.section4{
+  grid-area: section4;
+  background: #1a1b20;
+  
+  
+}
+.section4{
+  grid-area: section4;
+  background: #1a1b20;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+    padding-left:50px;
+  padding-right:50px;
+  
+}
+.container4
+{margin:auto;
+  width:100%;
+  height:60vh;
+  padding-left:40px;
+  padding-right:40px;
+   background: #1a1b20;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background:#2b2c31
+    ;
+  border:2px solid #62647d;
+  border-radius:10px;
+}
+
+.rightSide4{
+  display:flex;
+  flex-direction:column;
+ 
+  justify-content:center;
+  text-align:left;
+ padding-right:5vw;
+  padding-left:5vw;
+}
+.text3
+{
+ 
+  height:40vh;
+    display:flex;
+  flex-direction:column;
+ 
+  justify-content:center;
+  text-align:left;
+}
+.leftSide4{
+  display:flex;
+  flex-direction:column;
+ 
+  justify-content:center;
+  align-items:center;
+}
+.buttonContainer
+{
+
+   display:flex;
+  flex-direction:column;
+   
+  justify-content:center;
+  align-items:center;
+  width:30vw;
+  height:38vh;
+
+  height:max-content;
+  grid-gap:5vh;
+}
+button
+{
+  height:7vh;
+  width:29vw;
+  background:#585a73;
+  border:2px solid #afb2c9;
+  border-radius:10px;
+  color:#afb2c9;
+  transition: all 0.3s ease; 
+   font-family: "Jura", sans-serif;
+  
+}
+button:hover
+{
+   height:8vh;
+  width:30vw;
+   background:#afb2c9;
+  border:2px solid #585a73;
+  border-radius:10px;
+  color:#585a73;
+}
+
+.p11,.p33,.p44
+{
+  color:#8a8dab;
+  margin-block:20px;
+   font-family: "Jura", sans-serif;
+}
+.h21,.h23,.h24
+{
+   font-family: "Blood On Cauldron", sans-serif;
+  color:#afb2c9;
+}
+
+/******************************************************************************
+gang BElow
+******************************************************************************/
+.gangPageContainer {
+  grid-area: gang;
+  background: yellow;
+  padding: 20px 50px;
+   background: #1a1b20;
+   font-family: "Jura", sans-serif;
+}
+.container5
+{
+   background: #2b2c31;
+padding-block:30px;
+  border:2px solid #62647d;
+  border-radius:10px;
+  
+}
+.fat
+{
+  width:max-content;
+  margin:auto;
+  padding-block:20px;
+  color:red;
+   font-family: "Blood On Cauldron", sans-serif;
+  color:#afb2c9;
+}
+
+:root {
+  --cb: cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  transition: 0.25s;
+ 
+   
+  
+}
+
+.cards {
+  display: flex;
+  max-width: 800px;
+  width: calc(100% - 100px);
+  height: 400px;
+  position: relative;
+
+}
+.card
+{
+    border:solid 2px #62647d;
+}
+
+.cards .card .info .title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.cards .card .label .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  background-color: white;
+  color: var(--color);
+  border-radius: 50%;
+}
+
+.cards .card .label .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  white-space: pre;
+  transition: 1s var(--cb);
+}
+
+.cards .card {
+  position: relative;
+  min-width: 60px;
+  background: var(--bg);
+  overflow: hidden;
+  margin: 5px;
+  background-size: auto 150%;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s var(--cb);
+  border-radius: 30px;
+}
+
+.cards .card .label {
+  display: flex;
+  position: absolute;
+  right: 0;
+  height: 40px;
+  transition: 0.5s var(--cb);
+}
+
+.cards .card.active .label {
+  bottom: 20px;
+  left: 20px;
+}
+
+.cards .card.active {
+  flex-grow: 10000;
+  background-size: auto 100%;
+}
+
+.cards .card:not(.active) .label {
+  bottom: 10px;
+  left: 10px;
+}
+
+.cards .card .shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(0, #0004, transparent);
+}
+
+.cards .card.active .info {
+  opacity: 1;
+}
+
+.cards .card:not(.active) .info {
+  opacity: 0;
+}
+
+/******************************************************************************
+Footer BElow
+******************************************************************************/
+footer {
+  width: 100vw;
+  height: 25vh;
+  background: #1a0d16;
+  padding-block: 0.5vh;
+ 
+}
+
+.fa {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.footerTop {
+  height: 13vh;
+  width: 100vw;
+  display: grid;
+  padding-block: 1vh;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "contactSocialMedia"
+    "footerNav"
+    "peopleFooter";
+}
+
+.peopleFooter {
+  grid-area: peopleFooter;
+  width: 20vw;
+  height: 4vh;
+  margin: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: #afb2c9;
+}
+
+.footerNav {
+  grid-area: footerNav;
+
+  margin: auto;
+  width: 40vw;
+  height: 4vh;
+  background:  #1a0d16;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerNav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footerNav ul li {
+  margin-right: 20px;
+}
+
+.footerNav ul li a {
+  color: #afb2c9;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.contactSocialMedia {
+  grid-area: contactSocialMedia;
+
+  width: 20vw;
+  height: 4vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerDivider {
+  height: 3vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+hr {
+  height: 2px;
+  width: 90vw;
+  background: #afb2c9
+  border: none;
+  margin: auto;
+}
+.footerBottom {
+  color:#afb2c9;
+  height: 9vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

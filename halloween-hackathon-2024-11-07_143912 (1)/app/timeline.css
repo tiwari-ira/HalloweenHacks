@@ -1,0 +1,505 @@
+@import url("https://fonts.cdnfonts.com/css/metal-macabre-2");
+@import url("https://fonts.cdnfonts.com/css/chaos-metal");
+@import url("https://fonts.cdnfonts.com/css/metal-macabre");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Fuggles&family=Jura:wght@300&family=Kenia&display=swap");
+@import url("https://fonts.cdnfonts.com/css/crush-metal");
+@import url("https://fonts.cdnfonts.com/css/dezzy");
+@import url("https://fonts.cdnfonts.com/css/mockerel");
+@import url("https://fonts.cdnfonts.com/css/blood-on-cauldron");
+@import url("https://fonts.cdnfonts.com/css/devils-crew");
+@import url("https://fonts.cdnfonts.com/css/ghost-reverie");
+@import url("https://fonts.cdnfonts.com/css/heikudo-freedom");
+@import url("https://fonts.cdnfonts.com/css/halloweenn");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  line-height: calc(1em + 0.5rem);
+}
+html,
+body {
+  height: 100%;
+  background: #1a0d16;
+     background: #1a1b20;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/******************************************************************************
+CSS
+******************************************************************************/
+.container {
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 8vh 150vh ;
+  grid-template-areas:
+    "nav"
+    
+    "timeline"
+    
+    ;
+  grid-gap: 13vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+/******************************************************************************
+nav below
+******************************************************************************/
+.nav {
+  grid-area: nav;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px;
+
+  z-index: 80000;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  color: #342e37;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.7s, font-size 0.7s;
+}
+
+.nav ul li a:hover {
+  color: black;
+  font-size: 20px;
+}
+/******************************************************************************
+nav below
+******************************************************************************/
+.nav {
+  grid-area: nav;
+  background: #1a0d16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px;
+
+  z-index: 80000;
+   background: #1a1b20;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  color: #afb2c9;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.7s, font-size 0.7s;
+  font-family: "Jura", sans-serif;
+}
+
+.nav ul li a:hover {
+  color: #585a73;
+  font-size: 20px;
+}
+/******************************************************************************
+timeline below
+******************************************************************************/
+.timeline
+{
+  grid-area:timeline;
+  padding:40px;
+   background:#0b1215;
+  border-radius:20px;
+  display:grid;
+  
+  grid-template-columns: 1fr;
+  grid-template-rows:80px 40px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "timelineHeader"
+    "timelineGap"
+    
+    "timeline1"
+    "timeline2"
+  "timeline3"
+  "timeline4"
+  
+  "timeline5"
+  "timeline6"
+  "timeline7"
+  "timeline8"
+
+  ;
+ background: #1a0d16;
+  background:#2b2c31
+    ;
+  border:2px solid #62647d;
+  border-radius:10px;
+  
+}
+
+.timelineHeader
+{
+  grid-area:timelineHeader;
+  
+  border-radius:20px;
+  border:3px solid  #62647d;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-size:40px;
+  color: #62647d;
+   font-family: "Blood On Cauldron", sans-serif;
+}
+.timelineGap
+{
+  grid-area:timelineGap;
+  
+}
+.timeline1
+{
+  grid-area:timeline1;
+  border-left:7px solid  #62647d;
+   color: #62647d;
+}
+.timeline2
+{
+  grid-area:timeline2;
+
+    border-left:7px solid  #62647d;
+   color: #62647d;
+}
+.timeline3
+{
+  grid-area:timeline3;
+
+    border-left:7px solid  #62647d;
+   color: #62647d;
+}
+.timeline4
+{
+  grid-area:timeline4;
+
+    border-left:7px solid  #62647d;
+   color: #62647d;
+}
+.timeline5
+{
+  grid-area:timeline5;
+
+    border-left:7px solid  #62647d;
+   color: #62647d;
+}
+.timeline6
+{
+  grid-area:timeline6;
+  
+    border-left:7px solid  #62647d;
+   color: #62647d;
+}
+.timeline7
+{
+  grid-area:timeline7;
+ 
+    border-left:7px solid  #62647d;
+   color: #62647d;
+}
+.timeline8
+{
+  grid-area:timeline8;
+ color: #62647d;
+    border-left:7px solid  #62647d;
+}
+.timeline1:hover, 
+.timeline2:hover, 
+.timeline3:hover, 
+.timeline4:hover, 
+.timeline5:hover, 
+.timeline6:hover, 
+.timeline7:hover, 
+.timeline8:hover {
+  border-left: 12px solid #555555;
+  transition: border-left 0.3s ease-in-out;
+}
+/******************************************************************************
+timeline below
+******************************************************************************/
+.timeline
+{
+  grid-area:timeline;
+  padding:40px;
+   background:#0b1215;
+  border-radius:20px;
+  display:grid;
+  
+  grid-template-columns: 1fr;
+  grid-template-rows:80px 40px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "timelineHeader"
+    "timelineGap"
+    
+    "timeline1"
+    "timeline2"
+  "timeline3"
+  "timeline4"
+  
+  "timeline5"
+  "timeline6"
+  "timeline7"
+  "timeline8"
+
+  ;
+  background:#2b2c31
+    ;
+  border:2px solid #62647d;
+  border-radius:10px;
+  
+}
+
+.timelineHeader
+{
+  grid-area:timelineHeader;
+  
+  border-radius:20px;
+  border:3px solid  #62647d;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-size:40px;
+  color: #585a73;
+}
+.timelineGap
+{
+  grid-area:timelineGap;
+  
+}
+.timeline1
+{
+  grid-area:timeline1;
+  border-left:7px solid  #585a73;
+   color: #585a73;
+}
+.timeline2
+{
+  grid-area:timeline2;
+
+    border-left:7px solid #585a73;
+   color: #585a73;
+}
+.timeline3
+{
+  grid-area:timeline3;
+
+    border-left:7px solid #585a73;
+   color: #585a73;
+}
+.timeline4
+{
+  grid-area:timeline4;
+
+    border-left:7px solid  #585a73;
+   color: #585a73;
+}
+.timeline5
+{
+  grid-area:timeline5;
+
+    border-left:7px solid  #585a73;
+   color: #585a73;
+}
+.timeline6
+{
+  grid-area:timeline6;
+  
+    border-left:7px solid #585a73;
+   color: #585a73;
+}
+.timeline7
+{
+  grid-area:timeline7;
+ 
+    border-left:7px solid  #585a73;
+   color: #585a73;
+}
+.timeline8
+{
+  grid-area:timeline8;
+ color: #585a73;
+    border-left:7px solid  #585a73;
+}
+.timeline1:hover, 
+.timeline2:hover, 
+.timeline3:hover, 
+.timeline4:hover, 
+.timeline5:hover, 
+.timeline6:hover, 
+.timeline7:hover, 
+.timeline8:hover {
+  border-left: 12px solid #bbbbbb;
+  transition: border-left 0.3s ease-in-out;
+}
+.timelineText
+{
+  margin-left:50px;
+  color: #585a73;
+}
+.timelineDate
+{
+   margin-left:50px;
+}
+.timeline1:hover .timelineText, 
+.timeline1:hover .timelineDate,
+.timeline2:hover .timelineText, 
+.timeline2:hover .timelineDate,
+.timeline3:hover .timelineText, 
+.timeline3:hover .timelineDate,
+.timeline4:hover .timelineText, 
+.timeline4:hover .timelineDate,
+.timeline5:hover .timelineText, 
+.timeline5:hover .timelineDate,
+.timeline6:hover .timelineText, 
+.timeline6:hover .timelineDate,
+.timeline7:hover .timelineText, 
+.timeline7:hover .timelineDate,
+.timeline8:hover .timelineText, 
+.timeline8:hover .timelineDate {
+  color: #bbbbbb; 
+  transition: color 0.3s ease-in-out; 
+}
+/******************************************************************************
+Footer BElow
+******************************************************************************/
+footer {
+  width: 100vw;
+  height: 25vh;
+  background: #0b1215;
+  padding-block: 0.5vh;
+  margin-top: 5vh;
+}
+
+.fa {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.footerTop {
+  height: 13vh;
+  width: 100vw;
+  display: grid;
+  padding-block: 1vh;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "contactSocialMedia"
+    "footerNav"
+    "peopleFooter";
+}
+
+.peopleFooter {
+  grid-area: peopleFooter;
+  width: 20vw;
+  height: 4vh;
+  margin: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: white;
+  
+}
+
+.footerNav {
+  grid-area: footerNav;
+
+  margin: auto;
+  width: 40vw;
+  height: 4vh;
+  background: #0b1215;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerNav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footerNav ul li {
+  margin-right: 20px;
+}
+
+.footerNav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.contactSocialMedia {
+  grid-area: contactSocialMedia;
+
+  width: 20vw;
+  height: 4vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerDivider {
+  height: 3vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+hr {
+  height: 2px;
+  width: 90vw;
+  background: white;
+  border: none;
+  margin: auto;
+}
+.footerBottom {
+  color: white;
+  height: 9vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
